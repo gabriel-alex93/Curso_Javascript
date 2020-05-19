@@ -19,7 +19,7 @@ window.addEventListener('load', ()=>{
 			return false;
 		}
 		else{
-			document.querySelector("error_nombre").style.display = "none";
+			document.querySelector("#error_nombre").style.display = "none";
 		}
 		if(apellidos.trim() == null || apellidos.trim().length == 0){
 			alert("Los apellidos no son válido");
@@ -32,6 +32,17 @@ window.addEventListener('load', ()=>{
 
 		
 		box_dashed.style.display = "block";
+		var p_nombre =  document.querySelector("#p_nombre span");
+		var p_apellidos =  document.querySelector("#p_apellidos span");
+		var p_edad =  document.querySelector("#p_edad span");
+
+		p_nombre.innerHTML = nombre;
+		p_apellidos.innerHTML = apellidos;
+		p_edad.innerHTML = edad;
+
+
+
+		/*
 		var datos_usuario= [nombre, apellidos, edad];
 		var indice;
 		for(indice in datos_usuario){//este metodo hace que siga  creando parrafos infinitamente  en la pagina revisar el otro metodo
@@ -39,7 +50,7 @@ window.addEventListener('load', ()=>{
 			parrafo.append(datos_usuario[indice]);
 			box_dashed.append(parrafo);
 		}
-
+		*/
 
 	
 
